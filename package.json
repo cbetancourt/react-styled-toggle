@@ -1,5 +1,6 @@
 {
     "name": "react-styled-toggle",
+    "private": true,
     "version": "1.0.7",
     "description": "Customizable toggle component made with styled-components",
     "main": "dist/index.js",
@@ -47,14 +48,18 @@
         "npm-watch": "^0.3.0",
         "prettier": "1.12.1",
         "pretty-quick": "^1.4.1",
-        "react-test-renderer": "^16.3.2",
+        "react": "^15",
+        "react-dom": "^15",
+        "react-test-renderer": "^15",
         "regenerator-runtime": "^0.11.1"
     },
     "dependencies": {
         "npm-insights": "^1.0.6",
-        "react": "^16.3.2",
-        "react-dom": "^16.3.2",
         "styled-components": "^3.2.6"
+    },
+    "peerDependencies": {
+        "react": "^15",
+        "react-dom": "^15"
     },
     "repository": {
         "type": "git",

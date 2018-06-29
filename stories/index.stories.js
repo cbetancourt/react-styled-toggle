@@ -1,6 +1,6 @@
 import React from 'react';
 import {withInfo, setDefaults} from '@storybook/addon-info';
-import {withKnobs, text, boolean, number} from '@storybook/addon-knobs/react';
+import {withKnobs, boolean} from '@storybook/addon-knobs/react';
 import {storiesOf} from '@storybook/react';
 
 import Toggle from '../src';
@@ -11,7 +11,7 @@ setDefaults({
     source: true // Displays the source of story Component
 });
 
-const stories = storiesOf('react-styled-toggle', module);
+const stories = storiesOf('react-styled-toggle');
 stories
     .addDecorator((story, context) => withInfo('common info')(story)(context))
     .addDecorator(withKnobs)
@@ -42,4 +42,5 @@ stories
         <Toggle name={'toggle'} value={'toggleValue'} />
     ))
     .add('Label right', () => <Toggle labelRight={'Label'} />)
-    .add('Label left', () => <Toggle labelLeft={'Label'} />);
+    .add('Label left', () => <Toggle labelLeft={'Label'} />)
+    .add('Both labels', () => <Toggle labelLeft={'OFF'} labelRight={'ON'} />);
